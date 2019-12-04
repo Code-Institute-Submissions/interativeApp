@@ -14,7 +14,11 @@ var icons = [
     '<i class="fa fa-linode" aria-hidden="true"></i>'
 ];
 
-var gameMatch = [];
+var cardIconMatcher = [];
+var cardIDHolder = [];
+var tries = 0;
+var totalCardsDone = 0;
+
 function start() {
 
     var gameContainer = $("#game-actual");
@@ -64,7 +68,8 @@ function start() {
             container.setAttribute('class', 'cardMain');
 
             var card = document.createElement('div');
-            card.setAttribute('class', 'cardCustom');
+            card.setAttribute('class', 'cardCustom capture');
+            card.setAttribute('id', 'card_'+iconCount);
 
             var front = document.createElement('div');
             front.setAttribute('class', 'front');
@@ -86,8 +91,7 @@ function start() {
 
     gameContainer.show();
     
-    var cardFlipAction = $(".cardCustom");
-    cardFlipAction.click(gameLogic());
+    $(".capture").click(gameLogic);
 
 }
 
@@ -116,7 +120,44 @@ function reloadGame() {
 }
 
 function gameLogic() {
-    if(match){
+    if(cardIconMatcher.length < 2){
+        if(cardIconMatcher.length == 0){
+            var firstCard = $(this);
+            cardIconMatcher.push(firstCard.find('.back').html());
+            console.log(cardIconMatcher[0]);
+            var cardID = firstCard.attr('id');
+            cardIDHolder.push(cardID);
+            console.log(cardIDHolder[0]);
+            firstCard.addClass('flipped');
+
+        } else if(cardIconMatcher.length == 1){
+            var secondCard = $(this);
+            cardIconMatcher.push(secondCard.find('.back').html());
+            console.log(cardIconMatcher[1]);
+            var cardID = secondCard.attr('id');
+            cardIDHolder.push(cardID);
+            console.log(cardIDHolder[1]);
+            secondCard.addClass('flipped');
+
+            if(cardIconMatcher[0] === cardIconMatcher[1]){
+                $('#'+cardIDHolder[0]).off("click");
+                $('#'+cardIDHolder[1]).off("click");
+                cardIconMatcher = [];
+                cardIDHolder = [];
+                totalCardsDone += 2;
+                
+            } else {
+
+                $('#' + cardIDHolder[0]).removeClass('flipped');
+                $('#'+cardIDHolder[1]).removeClass('flipped');
+                
+                cardIconMatcher = [];
+                cardIDHolder = [];
+
+            }
+        }
+        
+    } else {
 
     }
 }
