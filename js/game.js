@@ -19,6 +19,7 @@ var cardIDHolder = [];
 var tries = 0;
 var totalCardsDone = 0;
 var level;
+var totalTries = 0;
 
 function start() {
 
@@ -139,6 +140,7 @@ function gameLogic() {
                 secondCard.removeClass('flipped');
                 cardIconMatcher = [];
                 cardIDHolder = [];
+                totalTries++;
                 
             } else {
                 cardIconMatcher.push(secondCard.find('.back').html());
@@ -153,8 +155,9 @@ function gameLogic() {
                     cardIDHolder = [];
                     totalCardsDone += 2;
                     console.log(totalCardsDone);
+                    totalTries++;
                     if(totalCardsDone == (level*6)) {
-                        alert('well done..!');
+                        alert('well done..! Total Tries: '+totalTries);
                     }       
                 } else {
 
@@ -163,11 +166,14 @@ function gameLogic() {
                     
                     cardIconMatcher = [];
                     cardIDHolder = [];
+                    totalTries++;
                     
 
                 }
             }
         }
+
+        
         
     } else {
 
