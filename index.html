@@ -54,9 +54,28 @@
 
     <!-- Main with padding 5 to hold everything except nav bar -->
 	<main class="pt-5">
-        <!-- section to hold content for about -->
-		<section id="game" class="min-vw-100 min-vh-100">
+        <!-- section to hold game -->
+		<section id="game" class="vw-100 vh-100">
+            
+            <div class="h-100 text-center">
+				<div id="game-start" class="centered">
+                    <h3>Choose the difficulty and Click Start</h3>
+					<select id="difficulty" class="btn btn-primary-outline mb-2">
+					  <option value="easy">Easy</option>
+					  <option value="medium">Medium</option>
+					  <option value="difficult">Difficult</option>
+					  <option value="advanced">Advanced</option>
+					</select>
+                    <button onclick="start();" class="btn btn-primary-outline my-2">Start</button>
+                </div>     
 
+                <div id="game-actual" class="h-100 text-center">
+                    
+                    <div class="centered">
+                    
+                    </div>                 
+                </div>               
+            </div>
             
 		</section>
 
@@ -100,6 +119,8 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 	</script>
 	<script src="js/main.js">
+	</script>
+    <script src="js/game.js">
 	</script>
 	<!-- End Adding bootstrap javascript files and Jquery files -->
 </body>

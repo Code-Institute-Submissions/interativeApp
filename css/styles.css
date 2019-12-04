@@ -16,10 +16,8 @@ body {
 
 #game {
     z-index: -1;
-    top: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
+    /* height: vh-100;
+    width: vw-100; */
     color: #ffffff;
     background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
     background-size: 400% 400%;
@@ -54,4 +52,83 @@ body {
     font-weight: 700;
     color: white;
     transition: color 300ms linear, font-weight 300ms linear;
+}
+
+.btn-primary-outline {
+  background-color: grey;
+  border-color: #ccc;
+  opacity: 50%;
+  color: whitesmoke;
+  font-size: 2em;
+  font-weight: 600;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+  height: 2em;
+
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cardMain {
+    width: 8em;
+    height: 6em;
+    position: relative;
+    border: 1px solid #ccc;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+}
+.cardCustom {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+.cardCustom div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 2em;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.cardCustom .front {
+  background: rgba(25, 25, 25, .35);
+}
+.cardCustom .back {
+    background: rgba(25, 25, 25, .75);
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.cardCustom.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
 }
