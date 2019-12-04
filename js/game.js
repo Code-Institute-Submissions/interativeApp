@@ -18,6 +18,7 @@ var cardIconMatcher = [];
 var cardIDHolder = [];
 var tries = 0;
 var totalCardsDone = 0;
+var level;
 
 function start() {
 
@@ -34,7 +35,7 @@ function start() {
     
     var difficulty = document.getElementById("difficulty");
     var difficultyOption = difficulty.options[difficulty.selectedIndex].text;
-    var level;
+    
     switch (difficultyOption) {
         case "Easy":
             level = 1;
@@ -132,28 +133,39 @@ function gameLogic() {
 
         } else if(cardIconMatcher.length == 1){
             var secondCard = $(this);
-            cardIconMatcher.push(secondCard.find('.back').html());
-            console.log(cardIconMatcher[1]);
             var cardID = secondCard.attr('id');
             cardIDHolder.push(cardID);
-            console.log(cardIDHolder[1]);
-            secondCard.addClass('flipped');
-
-            if(cardIconMatcher[0] === cardIconMatcher[1]){
-                $('#'+cardIDHolder[0]).off("click");
-                $('#'+cardIDHolder[1]).off("click");
+            if(cardIDHolder[0] == cardIDHolder[1]){
+                secondCard.removeClass('flipped');
                 cardIconMatcher = [];
                 cardIDHolder = [];
-                totalCardsDone += 2;
                 
             } else {
-
-                $('#' + cardIDHolder[0]).removeClass('flipped');
-                $('#'+cardIDHolder[1]).removeClass('flipped');
+                cardIconMatcher.push(secondCard.find('.back').html());
+                console.log(cardIconMatcher[1]);
                 
-                cardIconMatcher = [];
-                cardIDHolder = [];
+                console.log(cardIDHolder[1]);
+                secondCard.addClass('flipped');
+                if(cardIconMatcher[0] == cardIconMatcher[1]){
+                    $('#'+cardIDHolder[0]).off("click");
+                    $('#'+cardIDHolder[1]).off("click");
+                    cardIconMatcher = [];
+                    cardIDHolder = [];
+                    totalCardsDone += 2;
+                    console.log(totalCardsDone);
+                    if(totalCardsDone == (level*6)) {
+                        alert('well done..!');
+                    }       
+                } else {
 
+                    $('#' + cardIDHolder[0]).removeClass('flipped');
+                    $('#' + cardIDHolder[1]).removeClass('flipped');
+                    
+                    cardIconMatcher = [];
+                    cardIDHolder = [];
+                    
+
+                }
             }
         }
         
