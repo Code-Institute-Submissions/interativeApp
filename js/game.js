@@ -158,7 +158,26 @@ function gameLogic() {
                     totalTries++;
                     if(totalCardsDone == (level*6)) {
                         setTimeout(function() {
-                            alert('well done..! Total Tries: '+totalTries);
+                            var overlay = document.createElement('div');
+                            overlay.setAttribute('id', 'overlay');
+                            overlay.setAttribute('onClick', 'overlayOff()');
+                            
+                            var startAgain = document.createElement('button');
+                            startAgain.setAttribute('class','btn btn-primary my-2');
+                            startAgain.setAttribute('onClick','reloadGame();');
+                            startAgain.innerHTML = 'Start Again!';
+
+                            var note = document.createElement('h2');
+                            note.innerHTML = 'Well Done! Click anywhere to see how you performed or click on the button to start again';
+
+                            var contentHolder = document.createElement('div');
+                            contentHolder.setAttribute('id', 'endNote');
+                            contentHolder.appendChild(note);
+                            contentHolder.appendChild(startAgain);
+                            overlay.appendChild(contentHolder);
+                            document.body.appendChild(overlay);
+                            overlayOn();
+
                         }, 600);
                     }       
                 } else {
@@ -183,4 +202,12 @@ function gameLogic() {
     } else {
 
     }
+}
+
+function overlayOff() {
+    document.getElementById("overlay").style.display = "none";
+}
+
+function overlayOn() {
+    document.getElementById("overlay").style.display = "block";
 }
