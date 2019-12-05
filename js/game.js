@@ -157,7 +157,9 @@ function gameLogic() {
                     console.log(totalCardsDone);
                     totalTries++;
                     if(totalCardsDone == (level*6)) {
-                        alert('well done..! Total Tries: '+totalTries);
+                        setTimeout(function() {
+                            alert('well done..! Total Tries: '+totalTries);
+                        }, 600);
                     }       
                 } else {
                     function flipBothCards() {
