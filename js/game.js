@@ -160,13 +160,16 @@ function gameLogic() {
                         alert('well done..! Total Tries: '+totalTries);
                     }       
                 } else {
-
-                    $('#' + cardIDHolder[0]).removeClass('flipped');
-                    $('#' + cardIDHolder[1]).removeClass('flipped');
+                    function flipBothCards() {
+                        $('#' + cardIDHolder[0]).removeClass('flipped');
+                        $('#' + cardIDHolder[1]).removeClass('flipped');
+                        totalTries++;
+                        cardIconMatcher = [];
+                        cardIDHolder = [];
+                    }
                     
-                    cardIconMatcher = [];
-                    cardIDHolder = [];
-                    totalTries++;
+                    setTimeout(flipBothCards, 700);
+                    
                     
 
                 }
