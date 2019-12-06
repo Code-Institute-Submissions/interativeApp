@@ -22,7 +22,7 @@ var level;
 var totalTries = 0;
 
 function start() {
-
+    setInterval(timeManage, 1000);
     var gameContainer = $("#game-actual");
 
     var gameActual = $("#game-actual>.centered");
@@ -217,3 +217,4 @@ function overlayOff() {
 function overlayOn() {
     document.getElementById("overlay").style.display = "block";
 }
+
