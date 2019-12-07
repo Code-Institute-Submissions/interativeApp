@@ -177,3 +177,25 @@ text{
 #x-axis text {
 	font-weight: 600;
 }
+
+/* Shine effect */
+/* https://stackoverflow.com/questions/55989735/css-background-gradient-shine-animation */
+
+.boxShine {
+  height: 6em;
+  background-color: rebeccapurple;
+  background-image: linear-gradient(
+    to right,
+    transparent 55%,
+    rgba(255,255,255,0.5) 50%,
+    transparent 66%
+  );
+  background-size:500% 100%;
+  animation: shine 3s;
+}
+
+@keyframes shine {
+  0% {
+    background-position: right;    
+  }
+}

@@ -22,6 +22,11 @@ var level;
 var timer;
 var totalTries = 0;
 
+// https://stackoverflow.com/questions/9419263/playing-audio-with-javascript
+var flip = new Audio('assets/audio/flip.mp3');
+var rollback = new Audio('assets/audio/rollback.mp3');
+var match = new Audio('assets/audio/match.mp3');
+
 function start() {
     timer = setInterval(timeManage, 1000);
     var gameContainer = $("#game-actual");
@@ -123,6 +128,7 @@ function reloadGame() {
 }
 
 function gameLogic() {
+    flip.play();
     if(cardIconMatcher.length < 2){
         if(cardIconMatcher.length == 0){
             var firstCard = $(this);
@@ -150,8 +156,9 @@ function gameLogic() {
                 console.log(cardIDHolder[1]);
                 secondCard.addClass('flipped');
                 if(cardIconMatcher[0] == cardIconMatcher[1]){
-                    $('#'+cardIDHolder[0]).off("click");
-                    $('#'+cardIDHolder[1]).off("click");
+                    $('#'+cardIDHolder[0]).addClass('boxShine').off("click");
+                    $('#'+cardIDHolder[1]).addClass('boxShine').off("click");
+                    match.play();
                     cardIconMatcher = [];
                     cardIDHolder = [];
                     totalCardsDone += 2;
@@ -194,6 +201,7 @@ function gameLogic() {
                     function flipBothCards() {
                         $('#' + cardIDHolder[0]).removeClass('flipped');
                         $('#' + cardIDHolder[1]).removeClass('flipped');
+                        rollback.play();
                         totalTries++;
                         cardIconMatcher = [];
                         cardIDHolder = [];
@@ -204,10 +212,7 @@ function gameLogic() {
                     
                 }
             }
-        }
-
-        
-        
+        }    
     } else {
 
     }
