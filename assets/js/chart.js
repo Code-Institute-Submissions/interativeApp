@@ -1,7 +1,7 @@
 var data = [];
 
 easyChartS = sessionStorage.getItem('easyBestTime');
-if(easyChartS != '3600') {
+if(easyChartS != '3600' && easyChartS != null) {
     easyChartO = { 'difficulty':"Easy",'value': parseInt(easyChartS) }
     data.push(easyChartO);
 } else {
@@ -9,7 +9,7 @@ if(easyChartS != '3600') {
     data.push(easyChartO);
 }
 medChartS = sessionStorage.getItem('medBestTime');
-if(medChartS != '3600') {
+if(medChartS != '3600' && medChartS != null) {
     medChartO = { 'difficulty':"Medium",'value': parseInt(medChartS) }
     data.push(medChartO);
 } else {
@@ -17,7 +17,7 @@ if(medChartS != '3600') {
     data.push(medChartO);
 }
 difChartS = sessionStorage.getItem('difBestTime');
-if(difChartS != '3600') {
+if(difChartS != '3600' && difChartS != null) {
     difChartO = { 'difficulty':"Difficult",'value': parseInt(difChartS) }
     data.push(difChartO);
 } else {
@@ -25,7 +25,7 @@ if(difChartS != '3600') {
     data.push(difChartO);
 }
 advChartS = sessionStorage.getItem('advBestTime');
-if(advChartS != '3600'){
+if(advChartS != '3600' && advChartS != null){
     advChartO = { 'difficulty':"Advanced",'value': parseInt(advChartS) }
     data.push(advChartO);
 } else {

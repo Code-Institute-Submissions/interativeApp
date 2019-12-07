@@ -36,7 +36,13 @@ function start() {
     reloadButton.setAttribute('class','btn btn-primary-outline my-2');
     reloadButton.setAttribute('onClick','reloadGame();');
     reloadButton.innerHTML = 'Select Difficulty';
+
+    var timerClock = document.createElement('div');
+    timerClock.setAttribute('id', 'stats');
+    timerClock.innerHTML = '00:00';
+
     gameActual.append(reloadButton);
+    gameActual.append(timerClock);
     var gameStart = $("#game-start");
     gameContainer.hide();
     
@@ -180,11 +186,15 @@ function gameLogic() {
                         performance.innerHTML = 'Check your Performance!';
 
                         var note = document.createElement('h2');
-                        note.innerHTML = 'Well Done! Click anywhere to see how you performed or click on the button to start again';
+                        note.innerHTML = 'Well Done! Total Attempts: '+totalTries;
+
+                        var chartSVG = document.createElement('svg');
+                        chartSVG.setAttribute('id', 'chart');
 
                         var contentHolder = document.createElement('div');
                         contentHolder.setAttribute('id', 'endNote');
                         contentHolder.appendChild(note);
+                        contentHolder.appendChild(chartSVG);
                         contentHolder.appendChild(startAgain);
                         contentHolder.appendChild(performance);
                         overlay.appendChild(contentHolder);
