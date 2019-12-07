@@ -19,10 +19,11 @@ var cardIDHolder = [];
 var tries = 0;
 var totalCardsDone = 0;
 var level;
+var timer;
 var totalTries = 0;
 
 function start() {
-    setInterval(timeManage, 1000);
+    timer = setInterval(timeManage, 1000);
     var gameContainer = $("#game-actual");
 
     var gameActual = $("#game-actual>.centered");
@@ -184,6 +185,10 @@ function gameLogic() {
                         setTimeout(function() {
                             overlayOn();
                         }, 600);
+                        bestTimeInit();
+                        clearInterval(timer);
+                        bestTimeSet (level);
+
                     }       
                 } else {
                     function flipBothCards() {
@@ -197,7 +202,6 @@ function gameLogic() {
                     setTimeout(flipBothCards, 700);
                     
                     
-
                 }
             }
         }
