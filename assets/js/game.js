@@ -21,6 +21,7 @@ var totalCardsDone = 0;
 var level;
 var timer;
 var totalTries = 0;
+var chartDiv = document.createElement('section');
 
 // https://stackoverflow.com/questions/9419263/playing-audio-with-javascript
 var flip = new Audio('assets/audio/flip.mp3');
@@ -173,6 +174,7 @@ function gameLogic() {
                     if(totalCardsDone == (level*6)) {
                         var overlay = document.createElement('div');
                         overlay.setAttribute('id', 'overlay');
+                        overlay.setAttribute('class', 'min-vw-100 min-vh-100');
                         overlay.setAttribute('onClick', 'overlayOff();');
                         
                         var startAgain = document.createElement('button');
@@ -187,14 +189,15 @@ function gameLogic() {
 
                         var note = document.createElement('h2');
                         note.innerHTML = 'Well Done! Total Attempts: '+totalTries;
+                        
+                        
 
-                        var chartSVG = document.createElement('svg');
-                        chartSVG.setAttribute('id', 'chart');
+                        
 
                         var contentHolder = document.createElement('div');
                         contentHolder.setAttribute('id', 'endNote');
                         contentHolder.appendChild(note);
-                        contentHolder.appendChild(chartSVG);
+                        contentHolder.appendChild(chartDiv);
                         contentHolder.appendChild(startAgain);
                         contentHolder.appendChild(performance);
                         overlay.appendChild(contentHolder);

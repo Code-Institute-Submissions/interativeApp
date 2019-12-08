@@ -36,17 +36,10 @@ if(advChartS != '3600' && advChartS != null){
 // The Data that we wish to display on our graph, an array of Javascript Objects
 // https://codepen.io/ChrisDalley/pen/ZKJbKK
 
-// var data = [{
-//   'difficulty':"Difficult",'value': 12
-// },{
-//   'difficulty':"Advanced",'value': 14
-// }];
-
-
 // Set the dimensions of our chart to be displayed 
-var barsWidth = 500,
-	barsHeight = 400,
-	axisMargin = 100;
+var barsWidth = 400,
+	barsHeight = 300,
+	axisMargin = 50;
 
 var chartHeight = barsHeight+axisMargin,
 	chartWidth = barsWidth+axisMargin;
@@ -54,9 +47,9 @@ var chartHeight = barsHeight+axisMargin,
 
 // Select the chart element on the page so we can reference it in code
 // Also set the width and height attributes of the chart SVG 
-var chart = d3.select('#chart')
+var chart = d3.select(chartDiv).append("svg")
 	.attr('width', chartWidth+100)
-	.attr('height', chartHeight);
+    .attr('height', chartHeight);
 
 // Create a linear scale for our y-axis to map datapoint values to pixel heights of bars
 var yScale = d3.scaleLinear()

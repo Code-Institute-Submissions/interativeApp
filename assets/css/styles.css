@@ -136,8 +136,7 @@ body {
 #overlay {
   position: fixed;
   display: none;
-  width: 100%;
-  height: 100%;
+  padding: 0;
   top: 0;
   left: 0;
   right: 0;
@@ -162,7 +161,7 @@ body {
 }
 /* Lighten the axis lines */
 #x-axis path,#y-axis line, #y-axis path{
-	stroke: #666;
+	stroke: white;
 }
 /* Remove the tick marks on the x-axis */
 #x-axis .tick line{
@@ -170,13 +169,17 @@ body {
 }
 
 text{
-	fill: #666;
+	fill: white;
 	font-size: 12px;
 }
 
 #x-axis text {
 	font-weight: 600;
 }
+
+/* svg {
+    width: 50%;
+} */
 
 /* Shine effect */
 /* https://stackoverflow.com/questions/55989735/css-background-gradient-shine-animation */
