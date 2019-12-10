@@ -189,7 +189,6 @@ function gameLogic() {
 
                         var note = document.createElement('h2');
                         note.innerHTML = 'Well Done! Total Attempts: '+totalTries;
-                        loadChart();
                         var contentHolder = document.createElement('div');
                         contentHolder.setAttribute('id', 'endNote');
                         contentHolder.appendChild(note);
@@ -204,6 +203,7 @@ function gameLogic() {
                         bestTimeInit();
                         clearInterval(timer);
                         bestTimeSet (level);
+                        loadChart();
 
                     }       
                 } else {
