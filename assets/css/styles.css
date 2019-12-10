@@ -156,6 +156,9 @@ body {
   -ms-transform: translate(-50%,-50%);
 }
 
+/* The graph CSS was learnt from the following link
+https://codepen.io/ChrisDalley/pen/ZKJbKK */
+
 .bar{
 	fill: #28C587;
 }
@@ -181,7 +184,7 @@ text{
     width: 50%;
 } */
 
-/* Shine effect */
+/* Shine effect was learnt from the following link */
 /* https://stackoverflow.com/questions/55989735/css-background-gradient-shine-animation */
 
 .boxShine {
