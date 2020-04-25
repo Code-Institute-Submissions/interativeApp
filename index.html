@@ -5,27 +5,27 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- google fonts api -->
-    
+	<!-- google fonts api -->
+
 	<link
 		href="https://fonts.googleapis.com/css?family=Bitter|Dancing+Script|Lakki+Reddy|Lobster|Open+Sans+Condensed:300|Pacifico&display=swap"
 		rel="stylesheet">
-     <!-- font awesome library -->
+	<!-- font awesome library -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 		type="text/css">
-    <!-- Bootstrap CDN -->
+	<!-- Bootstrap CDN -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- d3.js library -->
-    <script src = "https://d3js.org/d3.v4.min.js"></script>
-    <!-- local style sheet -->
+	<!-- d3.js library -->
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<!-- local style sheet -->
 	<link rel="stylesheet" href="assets/css/styles.css" type="text/css">
-    
-	<title>Syed Irfan Rizvi Resume</title>
+
+	<title>Play Memory Game</title>
 </head>
 
 <body>
-    <!-- header to hold nav bar -->
+	<!-- header to hold nav bar -->
 	<header>
 		<nav id="mainNav" class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
 			<!-- Brand -->
@@ -33,36 +33,37 @@
 		</nav>
 	</header>
 
-    <!-- Main with padding 5 to hold everything except nav bar -->
-	<main class="pt-5">
-        <!-- section to hold game -->
+	<!-- Main with padding 5 to hold everything except nav bar -->
+	<main>
+		<!-- section to hold game -->
 		<section id="game" class="vw-100 vh-100">
-            
-            <div class="h-100 text-center">
+
+			<div class="overflow-hidden h-100 text-center">
+            <!-- start game screen -->
 				<div id="game-start" class="centered">
-                    <h3>Choose the difficulty and Click Start</h3>
-					<select id="difficulty" class="btn btn-primary-outline mb-2">
+					<h3 class="my-4">Choose the difficulty and Click Start</h3>
+					<select id="difficulty" class="btn btn-primary-outline">
 					  <option value="easy">Easy</option>
 					  <option value="medium">Medium</option>
 					  <option value="difficult">Difficult</option>
 					  <option value="advanced">Advanced</option>
 					</select>
-                    <button onclick="start();" class="btn btn-primary-outline my-2">Start</button>
-                </div>     
+					<button onclick="start();" class="btn btn-primary-outline">Start</button>
+				</div>
+                <!-- div section where game is crearted in javascript -->
+				<div id="game-actual" class="overflow-allowed h-100 text-center">
 
-                <div id="game-actual" class="h-100 text-center">
-                    
-                    <div class="centered">
-                    
-                    </div>                 
-                </div>               
-            </div>
-            
+					<div class="centered">
+
+					</div>
+				</div>
+			</div>
+
 		</section>
-  
+
 	</main>
 
-    <!-- footer of the website -->
+	<!-- footer of the website -->
 	<footer class="footer">
 		<p class="pt-2">
 			Syed Irfan Rizvi Portfolio <i class="fa fas fa-copyright"></i> copyright 2019<br />
@@ -73,13 +74,13 @@
 				<a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 				<a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
 				<a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
-				
-					<a href="http://jigsaw.w3.org/css-validator/check/referer">
+
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">
 					<img style="border:0;width:88px;height:31px"
                         src="http://jigsaw.w3.org/css-validator/images/vcss"
                         alt="Valid CSS!" />
                     </a>
-				
+
 			</div>
 	</footer>
 
@@ -95,11 +96,11 @@
 	</script>
 	<script src="assets/js/main.js">
 	</script>
-    <script src="assets/js/game.js">
+	<script src="assets/js/game.js">
 	</script>
-    <script src="assets/js/timeData.js">
+	<script src="assets/js/timeData.js">
 	</script>
-    <script src="assets/js/chart.js">
+	<script src="assets/js/chart.js">
 	</script>
 	<!-- End Adding bootstrap javascript files and Jquery files -->
 </body>

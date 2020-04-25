@@ -1,6 +1,8 @@
 function loadChart() {
+    // initializing empty data array to access in all functions
     var data = [];
 
+    // checking if best score exists in the session storage and if it is less than recent attempt
     easyChartS = sessionStorage.getItem('easyBestTime');
     if (easyChartS != '3600' && easyChartS != null) {
         easyChartO = { 'difficulty': "Easy", 'value': parseInt(easyChartS) }
