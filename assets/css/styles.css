@@ -7,6 +7,7 @@ html, body {
         
     }
 
+/* some generic properties given to body for troubleshooting and distinguishing */
 body {
     background-color: orange;
     background: -webkit-linear-gradient(to right, #EE7752, #E73C7E, #23A6D5, #23D5AB);  /* Chrome 10-25, Safari 5.1-6 */
@@ -14,6 +15,7 @@ body {
 
 }
 
+/* a changing gradient given to game div for creativity */
 #game {
     z-index: -1;
     /* height: vh-100;
@@ -55,6 +57,7 @@ body {
     transition: color 300ms linear, font-weight 300ms linear;
 }
 
+/* chaning properties of buttons to make them look more suitbale for game */
 .btn-primary-outline {
   background-color: grey;
   border-color: #ccc;
@@ -71,6 +74,7 @@ body {
 
 }
 
+/* a generic class to centre some elements in the html */
 .centered {
   position: relative;
   top: 50%;
@@ -86,6 +90,7 @@ body {
     overflow-y: visible;
 }
 
+/* The flipping on cards was learnt from bootstray website */
 .cardMain {
     width: 8em;
     height: 6em;
@@ -142,6 +147,7 @@ body {
     transform: rotateY( 180deg );
 }
 
+/* final overlay css to make a transparent grey background */
 #overlay {
   position: fixed;
   display: none;
@@ -155,6 +161,7 @@ body {
   cursor: pointer;
 }
 
+/* Final note after the game finishes */
 #endNote{
   position: absolute;
   top: 50%;
@@ -212,5 +219,35 @@ text{
 @keyframes shine {
   0% {
     background-position: right;    
+  }
+}
+
+/* footer basic css*/
+footer {
+    text-align: center;
+    background-color: #2ab7ca;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+/* changing only the size of social icons */
+.footer > .social-icons {
+    font-size: 2em;
+}
+
+/* changing the css properties of p element in footer */
+.footer > p{
+    font-size: 1.2em;
+    font-weight: 600;
+    opacity: .5;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Media Query to give border between start option and difficulty selector */
+@media only screen and (max-width: 600px) {
+  #difficulty {
+    margin-bottom: 5%;
   }
 }
