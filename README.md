@@ -1,6 +1,24 @@
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/irfanrizvidev/interativeApp) 
+# Syed Rizvi Memory Game
+Memory games are a very good way to sharpen your memory skills. 
 
-Credits:
+## UX
 
+## Features
+
+### Existing Features
+
+### Features left to Implement
+
+## Testing
+
+## Deployment
+
+## Credits
+
+### Content
+
+### Media
 sounds
 https://www.fesliyanstudios.com/sound-effects-search.php?q=sea
+
+### Acknowledgements
