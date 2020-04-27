@@ -19,16 +19,25 @@ This game can help children and adults equally to induldge themselves in a fun w
 ### Features left to Implement
 
 ## Technologies Used
-[GITPOD IO](https://gitpod.io)
-[HTML](https://www.wikipedia.com/HTML)
-[CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-[JavaScript](https://www.javascript.com/)
-[Bootstap 4](https://getbootstrap.com)
-[Google Fonts](https://fonts.google.com)
-[jQuery](https://jquery.com)
-[Popper.js](https://cdnjs.com)
-[Font Awesome](https://fontawesome.com)
-[d3.js v4](https://d3js.org)
+* [GITPOD IO](https://gitpod.io)
+
+* [HTML](https://www.wikipedia.com/HTML)
+
+* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+* [JavaScript](https://www.javascript.com/)
+
+* [Bootstap 4](https://getbootstrap.com)
+
+* [Google Fonts](https://fonts.google.com)
+
+* [jQuery](https://jquery.com)
+
+* [Popper.js](https://cdnjs.com)
+
+* [Font Awesome](https://fontawesome.com)
+
+* [d3.js v4](https://d3js.org)
 
 ## Testing
 
