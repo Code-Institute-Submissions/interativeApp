@@ -156,6 +156,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  padding: 20%;
   background-color: rgba(0,0,0,0.5);
   z-index: 2;
   cursor: pointer;
@@ -168,6 +169,7 @@ body {
   left: 50%;
   font-size: 50px;
   color: white;
+  padding: 10%;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 }
@@ -221,6 +223,12 @@ text{
     background-position: right;    
   }
 }
+/* making the svg graph responsive on all screen sizes */
+svg {
+    width: 50%;
+    display: inline-block;
+    /* text-align: center; */
+}
 
 /* footer basic css*/
 footer {
@@ -245,9 +253,17 @@ footer {
     margin-bottom: 0;
 }
 
+
 /* Media Query to give border between start option and difficulty selector */
 @media only screen and (max-width: 600px) {
   #difficulty {
     margin-bottom: 5%;
   }
+}
+
+/* media query to make the svg responsive on different screen sizes */
+@media only screen and (max-width: 1024px) {
+    svg {
+        width: 100%;
+    }
 }

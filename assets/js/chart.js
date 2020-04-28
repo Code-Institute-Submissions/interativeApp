@@ -40,8 +40,8 @@ function loadChart() {
     // https://codepen.io/ChrisDalley/pen/ZKJbKK
 
     // Set the dimensions of our chart to be displayed 
-    var barsWidth = 400,
-        barsHeight = 300,
+    var barsWidth = 500,
+        barsHeight = 350,
         axisMargin = 50;
 
     var chartHeight = barsHeight + axisMargin,
@@ -50,9 +50,15 @@ function loadChart() {
 
     // Select the chart element on the page so we can reference it in code
     // Also set the width and height attributes of the chart SVG 
-    var chart = d3.select(chartDiv).append("svg")
-        .attr('width', chartWidth + 100)
-        .attr('height', chartHeight);
+    // var chart = d3.select(chartDiv).append("svg")
+    //     .attr('width', chartWidth + 100)
+    //     .attr('height', chartHeight);
+
+    var chart = d3.select(chartDiv)
+        .classed("svg-container", true) //container class to make it responsive
+        .append("svg")
+        .attr("viewBox", "0 0 600 400")
+        
 
     // Create a linear scale for our y-axis to map datapoint values to pixel heights of bars
     var yScale = d3.scaleLinear()
@@ -114,5 +120,5 @@ function loadChart() {
         .attr('transform', 'translate(' + axisMargin + ',' + barsHeight + ')')
         .selectAll("text")
         .style("text-anchor", 'start')
-		.attr('transform', 'rotate(45)');
+        .attr('transform', 'rotate(45)');
 }

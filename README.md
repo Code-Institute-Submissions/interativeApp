@@ -11,12 +11,25 @@ This game can help children and adults equally to induldge themselves in a fun w
 * As the game developer, I want the game to have different difficulty level so that people on different levels still find the game challenging enough.
 * As the game developer, I want the game to be visually and audibly pleasant so that players get a good feeling about the game.
 
+The game has nice animations on the cards e.g. when the card is flipped or when the cards match. There are audio effects on card flips and cards match which give better experience to the player.
+The game is responsive and can run on a wife range of devices e.g. tvs, smartphones, laptops etc. Below are the DEMO on different screens.
 
 ## Features
+The game has many features and some of them would be desireable to have as listed below:
 
 ### Existing Features
+* Game is responsive
+* Game has visual and audible effects
+* Game has a best time features
+* Game records how many tries it took to match all the cards/tiles
+* Game shows the performace graph when all the cards are matched
+* Game has different levels of difficulty
 
 ### Features left to Implement
+* Having the best time record for last three attempts would be desireable
+* A dedeicated area to store best time and attempts 
+* Animated tiles to match for extra difficulty
+* Game without having to reload the page to start the game again
 
 ## Technologies Used
 * [GITPOD IO](https://gitpod.io)

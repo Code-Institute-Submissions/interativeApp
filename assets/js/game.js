@@ -22,7 +22,9 @@ var totalCardsDone = 0; // Total cards matched
 var level; // to store level selected by user
 var timer; // to store time taken to solve
 var totalTries = 0; // total tries
-var chartDiv = document.createElement('section'); // for chart creation at end of game
+var chartDiv = document.createElement('div'); // for chart creation at end of game
+
+
 
 // Learnt to use audio from https://stackoverflow.com/questions/9419263/playing-audio-with-javascript
 var flip = new Audio('assets/audio/flip.mp3'); // first click sound on tile
@@ -250,10 +252,12 @@ function gameLogic() {
                         note.innerHTML = 'Well Done! Total Attempts: '+totalTries;
                         var contentHolder = document.createElement('div');
                         contentHolder.setAttribute('id', 'endNote');
+                        contentHolder.setAttribute('class', 'text-center col-12');
 
                         //appending all the elemnts on the overlay one by one
                         contentHolder.appendChild(note);
-                        contentHolder.appendChild(chartDiv);
+                        contentHolder.append(chartDiv);
+                        
                         contentHolder.appendChild(startAgain);
                         overlay.appendChild(contentHolder);
                         document.body.appendChild(overlay);
@@ -262,10 +266,13 @@ function gameLogic() {
                         setTimeout(function() {
                             overlayOn();
                         }, 600);
-
+                        // these functions are defined timedata.js
+                        // Save the best time
                         bestTimeInit();
                         clearInterval(timer);
+                        // setting the best time for appropriate level of deifficulty only
                         bestTimeSet (level);
+                        // load the chart with the data in session storage
                         loadChart();
 
                     }  
