@@ -14,7 +14,8 @@ This game can help children and adults equally to induldge themselves in a fun w
 The game has nice animations on the cards e.g. when the card is flipped or when the cards match. There are audio effects on card flips and cards match which give better experience to the player.
 The game is responsive and can run on a wife range of devices e.g. tvs, smartphones, laptops etc. Below are the DEMO on different screens.
 
-A gif demo is below on a large screen:
+<div align="center"> **A gif demo is below on a large screen:** </div>
+
 ![Demo of Memory Game](/assets/images/large-screen-web.gif)
 ## Features
 The game has many features and some of them would be desireable to have as listed below:
@@ -55,15 +56,35 @@ The game has many features and some of them would be desireable to have as liste
 * [d3.js v4](https://d3js.org)
 
 ## Testing
+The website is tested on Google Chrome for different screen sizes e.g. (S5 mobile, Iphone, Ipad etc.). The website is also tested on Firefox and Internet explorer latest versions.
+The game was working fine on Google chrome when tested on Firefox and IE. The front of the cards were shown after flipping them. A fix was implemented by applying the following code on .customcard .front classes.
+```
+-webkit-transform: rotateX(0deg);
+-moz-transform: rotateX(0deg);
+-o-transform: rotateX(0deg);
+transform: rotateX(0deg);
+```
+
+Working fine on Goolge:
+![Working fine on Google](/assets/images/works-google.png)
+
+Problem on Firefox and IE:
+![Working fine on Google](/assets/images/probelm.png)
+
+The HTML was validated on w3.org and the results were OK as seen below:
+![HTML Validated](/assets/images/html.jpg)
+
+The css was also validated on w3.org and the results were ok as seen below:
+![CSS Validated](/assets/images/cssvalidated.png)
 
 ## Deployment
 
 ## Credits
-
-### Content
-
+Author: Syed Irfan Haider Rizvi
 ### Media
 sounds
 https://www.fesliyanstudios.com/sound-effects-search.php?q=sea
 
 ### Acknowledgements
+I received help from different youtube videos by searching javascript match cards.
+I coded the game by myself. I only looked at the videos to get ideas.

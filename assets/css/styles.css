@@ -130,8 +130,18 @@ body {
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
+/* 
+Got help from the following link to hide the front of the cards on firefox and IE
+https://stackoverflow.com/questions/49202655/flipping-a-card-over-with-css-js-firefox-issue
+ */
+
 .cardCustom .front {
   background: rgba(25, 25, 25, .35);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
 .cardCustom .back {
     background: rgba(25, 25, 25, .75);
