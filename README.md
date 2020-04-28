@@ -15,6 +15,7 @@ The game has nice animations on the cards e.g. when the card is flipped or when 
 The game is responsive and can run on a wife range of devices e.g. tvs, smartphones, laptops etc. Below are the DEMO on different screens.
 
 <div align="center"> **A gif demo is below on a large screen:** </div>
+<div align="center"> **The game is live at: https://irfanrizvidev.github.io/interativeApp/** </div>
 
 ![Demo of Memory Game](/assets/images/large-screen-web.gif)
 ## Features
@@ -36,24 +37,34 @@ The game has many features and some of them would be desireable to have as liste
 
 ## Technologies Used
 * [GITPOD IO](https://gitpod.io)
+    * GITPOD was used as  the development platform to develop this project.
 
 * [HTML](https://www.wikipedia.com/HTML)
+    * HTML 5 is used to make this web project.
 
 * [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+    * CSS is used to style the HTML elements
 
 * [JavaScript](https://www.javascript.com/)
+    * JavaScript language is used to created the logic of the game and to make game more interactive.
 
-* [Bootstap 4](https://getbootstrap.com)
+* [Bootstrap 4](https://getbootstrap.com)
+    * Bootstrap 4 is the latest version of Bootstrap and it was used to make the Logo on the Navigation bar and to structure the website.
 
 * [Google Fonts](https://fonts.google.com)
+    * Google Fonts were implemented to make the website more attractive. 
 
 * [jQuery](https://jquery.com)
+    * JQuery was used for easy manipulation of DOM in javascript.
 
 * [Popper.js](https://cdnjs.com)
+    Popper.js is a dependency of Bootstrap. 
 
 * [Font Awesome](https://fontawesome.com)
+    * The tiles were made using the font awesome.
 
 * [d3.js v4](https://d3js.org)
+    * d3.js was used to generate dynamic charts of the best time. 
 
 ## Testing
 The website is tested on Google Chrome for different screen sizes e.g. (S5 mobile, Iphone, Ipad etc.). The website is also tested on Firefox and Internet explorer latest versions.
@@ -66,15 +77,19 @@ transform: rotateX(0deg);
 ```
 
 Working fine on Goolge:
+
 ![Working fine on Google](/assets/images/works-google.png)
 
 Problem on Firefox and IE:
+
 ![Working fine on Google](/assets/images/probelm.png)
 
 The HTML was validated on w3.org and the results were OK as seen below:
+
 ![HTML Validated](/assets/images/html.jpg)
 
 The css was also validated on w3.org and the results were ok as seen below:
+
 ![CSS Validated](/assets/images/cssvalidated.png)
 
 ## Deployment
@@ -82,7 +97,7 @@ The css was also validated on w3.org and the results were ok as seen below:
 ## Credits
 Author: Syed Irfan Haider Rizvi
 ### Media
-sounds
+The sound effects used in the game are from the following website:
 https://www.fesliyanstudios.com/sound-effects-search.php?q=sea
 
 ### Acknowledgements

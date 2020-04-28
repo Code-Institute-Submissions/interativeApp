@@ -1,11 +1,11 @@
 html, body {
-        margin: 0;
-        padding: 0;
-        overflow-x:hidden;
-        /* to have smooth scroll effect */
-        scroll-behavior: smooth; 
-        
-    }
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden;
+    /* to have smooth scroll effect */
+    scroll-behavior: smooth; 
+    
+}
 
 /* some generic properties given to body for troubleshooting and distinguishing */
 body {
@@ -59,27 +59,27 @@ body {
 
 /* chaning properties of buttons to make them look more suitbale for game */
 .btn-primary-outline {
-  background-color: grey;
-  border-color: #ccc;
-  opacity: 50%;
-  color: whitesmoke;
-  font-size: 2em;
-  font-weight: 600;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 0;
-  padding-bottom: 0;
-  text-align: center;
-  height: 2em;
+    background-color: grey;
+    border-color: #ccc;
+    opacity: 50%;
+    color: whitesmoke;
+    font-size: 2em;
+    font-weight: 600;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    height: 2em;
 
 }
 
 /* a generic class to centre some elements in the html */
 .centered {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .overflow-hidden {
@@ -137,11 +137,11 @@ https://stackoverflow.com/questions/49202655/flipping-a-card-over-with-css-js-fi
  */
 
 .cardCustom .front {
-  background: rgba(25, 25, 25, .35);
-  -webkit-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
-  -o-transform: rotateX(0deg);
-  transform: rotateX(0deg);
+    background: rgba(25, 25, 25, .35);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
 }
 .cardCustom .back {
     background: rgba(25, 25, 25, .75);
@@ -159,29 +159,29 @@ https://stackoverflow.com/questions/49202655/flipping-a-card-over-with-css-js-fi
 
 /* final overlay css to make a transparent grey background */
 #overlay {
-  position: fixed;
-  display: none;
-  padding: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 20%;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2;
-  cursor: pointer;
+    position: fixed;
+    display: none;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
 }
 
 /* Final note after the game finishes */
 #endNote{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 50px;
-  color: white;
-  padding: 10%;
-  transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    padding: 10%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
 }
 
 /* The graph CSS was learnt from the following link
@@ -208,30 +208,26 @@ text{
 	font-weight: 600;
 }
 
-/* svg {
-    width: 50%;
-} */
-
 /* Shine effect was learnt from the following link */
 /* https://stackoverflow.com/questions/55989735/css-background-gradient-shine-animation */
 
 .boxShine {
-  height: 6em;
-  background-color: rebeccapurple;
-  background-image: linear-gradient(
+    height: 6em;
+    background-color: rebeccapurple;
+    background-image: linear-gradient(
     to right,
     transparent 55%,
     rgba(255,255,255,0.5) 50%,
     transparent 66%
-  );
-  background-size:500% 100%;
-  animation: shine 3s;
+    );
+    background-size:500% 100%;
+    animation: shine 3s;
 }
 
 @keyframes shine {
-  0% {
-    background-position: right;    
-  }
+    0% {
+        background-position: right;    
+    }
 }
 /* making the svg graph responsive on all screen sizes */
 svg {
@@ -266,9 +262,9 @@ footer {
 
 /* Media Query to give border between start option and difficulty selector */
 @media only screen and (max-width: 600px) {
-  #difficulty {
-    margin-bottom: 5%;
-  }
+    #difficulty {
+        margin-bottom: 5%;
+    }
 }
 
 /* media query to make the svg responsive on different screen sizes */
