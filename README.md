@@ -14,6 +14,8 @@ This game can help children and adults equally to induldge themselves in a fun w
 The game has nice animations on the cards e.g. when the card is flipped or when the cards match. There are audio effects on card flips and cards match which give better experience to the player.
 The game is responsive and can run on a wife range of devices e.g. tvs, smartphones, laptops etc. Below are the DEMO on different screens.
 
+A gif demo is below on a large screen:
+![Demo of Memory Game](/assets/images/large-screen-web.gif)
 ## Features
 The game has many features and some of them would be desireable to have as listed below:
 
