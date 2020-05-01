@@ -58,7 +58,7 @@ The game has many features and some of them would be desireable to have as liste
     * JQuery was used for easy manipulation of DOM in javascript.
 
 * [Popper.js](https://cdnjs.com)
-    Popper.js is a dependency of Bootstrap. 
+    * Popper.js is a dependency of Bootstrap. 
 
 * [Font Awesome](https://fontawesome.com)
     * The tiles were made using the font awesome.
@@ -93,7 +93,46 @@ The css was also validated on w3.org and the results were ok as seen below:
 ![CSS Validated](/assets/images/cssvalidated.png)
 
 ## Deployment
+The project is deployed on Github pages on the following link:
 
+[Live deployed project on Github Pages](https://irfanrizvidev.github.io/interativeApp/)
+
+The project is developed using GITPOD IO. GITPOD allows easy to use GIT integration to commit changes on Github. 
+
+<div align="center">Staging the changes using GIT section on GITPOD</div>
+
+![Gitpod changes staging](/assets/images/stage.png)
+
+<div align="center">The changes are commited after a message as shown below</div>
+
+![COmmit changes](/assets/images/commit.png)
+
+<div align="center">Pushing changes to Github</div>
+
+![Push on GitPOD](/assets/images/push.png)
+
+<div align="center">Click on Settings and Publish project on Github Pages</div>
+
+![GITHUB pages](/assets/images/githubpages.png)
+
+The same would be achieved using the following git commands:
+```
+git init
+
+git add file name
+
+git commit -m "comment"
+
+orgin master copied from the github pages
+
+git push orgin master
+
+git status
+
+github username entered
+
+github password entered
+```
 ## Credits
 Author: Syed Irfan Haider Rizvi
 ### Media

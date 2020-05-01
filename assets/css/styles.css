@@ -90,16 +90,16 @@ body {
     overflow-y: visible;
 }
 
-/* The flipping on cards was learnt from bootstray website */
+/* The flipping on cards was learnt from bootstrap website */
 .cardMain {
     width: 8em;
     height: 6em;
     position: relative;
     border: 1px solid #ccc;
-    -webkit-perspective: 800px;
-    -moz-perspective: 800px;
-    -o-perspective: 800px;
-    perspective: 800px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+    perspective: 1000px;
 }
 .cardCustom {
     width: 100%;
@@ -142,6 +142,7 @@ https://stackoverflow.com/questions/49202655/flipping-a-card-over-with-css-js-fi
     -moz-transform: rotateX(0deg);
     -o-transform: rotateX(0deg);
     transform: rotateX(0deg);
+    
 }
 .cardCustom .back {
     background: rgba(25, 25, 25, .75);
