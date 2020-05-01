@@ -67,6 +67,7 @@ The game has many features and some of them would be desireable to have as liste
     * d3.js was used to generate dynamic charts of the best time. 
 
 ## Testing
+The Javascript was tested on https://jshint.com/ for errors. All errors corrected in the Javascript.
 The website is tested on Google Chrome for different screen sizes e.g. (S5 mobile, Iphone, Ipad etc.). The website is also tested on Firefox and Internet explorer latest versions.
 The game was working fine on Google chrome when tested on Firefox and IE. The front of the cards were shown after flipping them. A fix was implemented by applying the following code on .customcard .front classes.
 ```

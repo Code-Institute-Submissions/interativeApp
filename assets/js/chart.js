@@ -5,34 +5,34 @@ function loadChart() {
     // checking if best score exists in the session storage and if it is less than recent attempt
     easyChartS = sessionStorage.getItem('easyBestTime');
     if (easyChartS != '3600' && easyChartS != null) {
-        easyChartO = { 'difficulty': "Easy", 'value': parseInt(easyChartS) }
+        easyChartO = { 'difficulty': "Easy", 'value': parseInt(easyChartS) };
         data.push(easyChartO);
     } else {
-        easyChartO = { 'difficulty': "Easy", 'value': 60 }
+        easyChartO = { 'difficulty': "Easy", 'value': 60 };
         data.push(easyChartO);
     }
     medChartS = sessionStorage.getItem('medBestTime');
     if (medChartS != '3600' && medChartS != null) {
-        medChartO = { 'difficulty': "Medium", 'value': parseInt(medChartS) }
+        medChartO = { 'difficulty': "Medium", 'value': parseInt(medChartS) };
         data.push(medChartO);
     } else {
-        medChartO = { 'difficulty': "Medium", 'value': 60 }
+        medChartO = { 'difficulty': "Medium", 'value': 60 };
         data.push(medChartO);
     }
     difChartS = sessionStorage.getItem('difBestTime');
     if (difChartS != '3600' && difChartS != null) {
-        difChartO = { 'difficulty': "Difficult", 'value': parseInt(difChartS) }
+        difChartO = { 'difficulty': "Difficult", 'value': parseInt(difChartS) };
         data.push(difChartO);
     } else {
-        difChartO = { 'difficulty': "Difficult", 'value': 60 }
+        difChartO = { 'difficulty': "Difficult", 'value': 60 };
         data.push(difChartO);
     }
     advChartS = sessionStorage.getItem('advBestTime');
     if (advChartS != '3600' && advChartS != null) {
-        advChartO = { 'difficulty': "Advanced", 'value': parseInt(advChartS) }
+        advChartO = { 'difficulty': "Advanced", 'value': parseInt(advChartS) };
         data.push(advChartO);
     } else {
-        advChartO = { 'difficulty': "Advanced", 'value': 60 }
+        advChartO = { 'difficulty': "Advanced", 'value': 60 };
         data.push(advChartO);
     }
 
@@ -57,7 +57,7 @@ function loadChart() {
     var chart = d3.select(chartDiv)
         .classed("svg-container", true) //container class to make it responsive
         .append("svg")
-        .attr("viewBox", "0 0 600 400")
+        .attr("viewBox", "0 0 600 400");
         
 
     // Create a linear scale for our y-axis to map datapoint values to pixel heights of bars
@@ -122,3 +122,4 @@ function loadChart() {
         .style("text-anchor", 'start')
         .attr('transform', 'rotate(45)');
 }
+
