@@ -15,7 +15,7 @@ The game has nice animations on the cards e.g. when the card is flipped or when 
 The game is responsive and can run on a wife range of devices e.g. tvs, smartphones, laptops etc. Below are the DEMO on different screens.
 
 <div align="center"> **A gif demo is below on a large screen:** </div>
-<div align="center"> **The game is live at: https://irfanrizvidev.github.io/interativeApp/** </div>
+<div align="center"> The game is live at: https://irfanrizvidev.github.io/interativeApp/  </div>
 
 ![Demo of Memory Game](/assets/images/large-screen-web.gif)
 ## Features
